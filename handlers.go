@@ -9,6 +9,8 @@ import (
 
 func IndexPageShow(context *gin.Context) {
 
+	log.Info("Show index page method")
+
 	context.HTML(
 		http.StatusOK,
 		"index.html",
@@ -26,6 +28,7 @@ func Uploading(context *gin.Context) {
 	// Данные из формы
 	//fileHeader, err := context.FormFile("file_name")
 	_, fileHeader, err := context.Request.FormFile("file_name")
+	log.Info("Start uploading")
 
 	if err != nil {
 

@@ -6,7 +6,7 @@ import (
 
 func InitRoutes(router *gin.Engine) {
 
-	router.Handle("GET", "/backups", IndexPageShow)
-	router.Handle("POST", "/backups/uploading", Uploading)
+	router.Handle("GET", "/", IndexPageShow)
+	router.Handle("POST", "/uploading", Uploading)
 
 }
