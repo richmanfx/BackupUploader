@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ .title }}</title>
 
-    <!-- jQuery -->
-    <script src="/js/jquery.min.js"></script>
+{{ template "header.html" .}}
 
-    <!-- Стили приложения -->
-    <link rel="stylesheet" type="text/css" href="/css/app.css">
-
-
-</head>
-<body>
     <h1>Загрузка бекапов</h1>
 
-    <form method="post" action="/backups/uploading" id="input_form">
+    <form method="post" action="/backups/uploading" id="input_form" enctype='multipart/form-data'>
 
         <p>
-            <input type="file" name="file_name" id="file_name">
+            <input type="file" name="file_name" id="file_name" >
         </p>
 
         <p>
@@ -26,5 +14,4 @@
         </p>
     </form>
 
-</body>
-</html>
+{{ template "footer.html" .}}
