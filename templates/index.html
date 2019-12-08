@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .title }}</title>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+
+    <!-- Стили приложения -->
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+
+
+</head>
+<body>
+    <h1>Загрузка бекапов</h1>
+
+    <form method="post" action="/backups/uploading" id="input_form">
+
+        <p>
+            <input type="file" name="file_name" id="file_name">
+        </p>
+
+        <p>
+            <input type="submit" id="upload_button" value="Upload">
+        </p>
+    </form>
+
+</body>
+</html>
